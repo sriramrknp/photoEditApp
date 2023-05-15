@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+</head>  
+<body>
+ 
+    <h2>Select the features from the given list</h2>
+
+    <button type="button" class="collapsible">RESIZE</button>
+    <div class="content">
+        <form action="/resize" method="post">
+            <!-- <label for="xSize">X Pixels</label> -->
+			<input type="number" name="x" id="xNum" placeholder="Give X pixels">
+            <br>
+            <!-- <label for="ySize">Y Pixels</label> -->
+            <input type="number" name="y" id="yNum" placeholder="Give Y pixels">
+			<br>
+			<button type="submit">Enter</button>
+		</form>
+    </div>
+    
+    <button type="button" class="collapsible">ROTATE</button>
+    <div class="content">
+        <form action="/rotate" method="post">
+			<input type="number" name="degree" id="deg" placeholder="Angle in degree">
+            <br>
+			<button type="submit">Enter</button>
+		</form>
+    </div>
+
+    <button type="button" class="collapsible">SCALE</button>
+    <div class="content">
+        <form action="/scale" method="post">
+			<input type="number" step="any" name="scaleFactor" id="scFac" placeholder="Scale Factor">
+            <br>
+			<button type="submit">Enter</button>
+		</form>
+    </div>
+    
+    <button type="button" class="collapsible">Apply filters</button>
+    <div class="content">
+        <form action="/gray" method="post">
+            <br>
+			<button type="submit">Gray filter</button>
+            <br>
+        </form>
+        <form action="/sharp" method="post">
+            <br>
+            <button type="submit">Sharp filter</button>
+            <br>
+        </form>
+    </div>
+
+    <!-- Download Section-->
+	<div class="download">
+		<h3>Download Section</h3> <br>
+		<!-- action to the /download route-->
+		<form action="/download" method="get">
+			<button type="submit">Download</button>
+		</form>
+	</div>
+    
+    <div id="footer">
+        <p>Made with ❤️ by Sriram</p>
+    </div>
+
+</body>
+<script src="./styleJS.js" charset="utf8"></script>
+</html>
